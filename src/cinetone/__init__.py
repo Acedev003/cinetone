@@ -28,7 +28,7 @@ def main():
     
     im = Image.new(mode="RGB",size=(len(pix_list),1))
     im.putdata(pix_list)
-    im = im.resize((500,200))
+    im = im.resize((480,360),resample=Image.Resampling.BICUBIC)
     im.show()
 
     
