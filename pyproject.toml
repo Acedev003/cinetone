@@ -1,6 +1,6 @@
 [project]
 name="cinetone"
-version = "0.0.2"
+version = "0.0.3"
 description = "Video Color Palette Generator"
 readme = "README.md"
 license = {text = "MIT License"}
