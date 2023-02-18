@@ -2,6 +2,8 @@
 
 A python CLI tool for generating color palettes from a given video file. 
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="misc/out.png" width="256px" height="144px"><br>
+
 ## Installation
 
 Install it from pypi using : 
