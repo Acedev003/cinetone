@@ -20,7 +20,9 @@ def main():
     colscnt = 0
     channels = 3
 
-    for frame in iio.imiter(args.video_file):
+    for index,frame in enumerate(iio.imiter(args.video_file)):
+        if(index%50 != 0):
+            continue
 
         if rowcnt == 0 or colscnt == 0:
             rowcnt = frame.shape[0]
@@ -36,7 +38,7 @@ def main():
 
     im = Image.new(mode="RGB",size=(len(pix_list),1))
     im.putdata(pix_list)
-    im = im.resize((480,360),resample=Image.Resampling.BICUBIC)
+    im = im.resize((480,360),resample=Image.Resampling.NEAREST)
     im.save("out.png")
 
     
