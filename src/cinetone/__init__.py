@@ -1,4 +1,4 @@
-import imageio as iio
+import imageio.v3 as iio
 import argparse
 from PIL import Image
 import numpy as np
@@ -30,7 +30,7 @@ def main():
     if(args.skipcount):
         skipcount = args.skipcount
 
-    for index,frame in enumerate(iio.imiter(args.video_file)):
+    for index,frame in enumerate(iio.imiter(args.video_file,plugin="pyav")):
         if( index % skipcount != 0):
             continue
 
